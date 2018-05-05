@@ -50,4 +50,26 @@ $(document).ready(function() {
     $('.toggle_but').toggleClass('tog_mnu');
   });
 
-});
+  /******** mixItUp - Projects animation ********/
+
+  $(function(){ 
+    $(".projects-sect").mixItUp({
+      selectors: {
+        target:'.mix',
+        filter:'.filter'
+      },
+      animation: {
+        enable:true,
+        effects:'scale fade',
+        duration:700
+      }
+    });
+  });
+
+});  
+
+
+
+
+
+
