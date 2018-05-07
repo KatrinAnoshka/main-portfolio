@@ -193,7 +193,7 @@ body,
   	text-align: center;
   	transition: .2s;
   	transform-origin: 50% 60%;
-  	background: #ab5a35;
+  	background: #d6b39a;
 }
 
 .btn-arrow:after {
@@ -781,6 +781,31 @@ a.pr-info {
     padding-right: 10px;
     transition: all .3s;
     -webkit-transition: all .3s;
+}
+
+/* Section Footer */
+.main-footer {
+  background-color: rgba(96, 89, 90, 0.85);
+}
+.copy-wrap {
+	padding: 10px 0;
+}
+.copy-wrap p {
+	text-align: center;
+    /* padding: 12px 0; */
+    color: #a2b8bf;
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin: 0;
+    margin-top: 12px;
+}
+
+.copy-wrap img {
+    cursor: pointer;
+    /* text-align: center; */
+    margin: 0px auto;
+    display: block;
+    /* padding-top: 5px; */
 }
 
 
