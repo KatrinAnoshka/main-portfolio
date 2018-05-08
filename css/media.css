@@ -11,6 +11,10 @@
 @media only screen and (max-width: 992px) {
 	.main-title {
     	font-size: 2.2em;
+	} 
+
+	.tls-content {
+		margin-top: 90px;
 	}
 	.header-text {
 		font-size: 19px;
@@ -48,6 +52,12 @@
 	.cnt-left {
 		padding-top: 25px;
 	}
+	.footer-menu {
+		padding-left: 0;
+	}
+	.footer-menu li a {
+		margin: 0 14px;
+	}
 }
 
 @media only screen and (max-width : 480px) {
@@ -74,3 +84,13 @@
     padding: 40px 15px 0;
 	}
 }	
+
+@media only screen and (max-width : 400px) {
+	.footer-menu li a {
+	   
+	    font-size: 14px;
+	    
+	    margin: 0 10px;
+	   
+	}
+}

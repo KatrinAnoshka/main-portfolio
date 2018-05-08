@@ -175,7 +175,7 @@ body,
     border: none;
     color: white;
     transition: .2s;
-    margin: 75px 30px -17px;
+    margin: 48px 30px -17px;
     min-width: 15em;
 }
 
@@ -415,16 +415,77 @@ body,
 	opacity: 1;
 } 
 
+/*Tools*/
+
+.tools-sect {
+  	padding: 55px 0 12px;
+	background-color: #e4d8d7;
+	
+}  
+
+.tls-title {
+  color: #341918;
+  font-size: 30px;
+  text-shadow: #d6b39a 2px -2px 5px;
+  position: relative;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.tls-title:after {
+	position: absolute;
+	content: '';
+	height: 4px;
+	background-color: #a2b8bf;
+	width: 165px;
+	display: block;
+	bottom: -30px;
+	left: 50%;
+	transform: translate(-50%, 0);
+}  
+
+.tls-content {
+	display: flex;
+    
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 94px;
+    width: 100%;
+    flex-wrap: wrap;
+}  
+.tls-item {
+	padding: 38px 22px;
+}
+.tls-item img {
+	width: auto;
+    height: 150px;
+    text-align: center;
+    
+}
+
+.btm-triangle {
+	height: 90px;
+    position: absolute;
+    top: -1px;
+    background-image: url(../img/s2_triangle.png);
+    width: 100%;
+    background-position: top;
+    background-size: 100% 100%;
+    text-align: center;
+}
 
 /* Section Portfolio */
 .projects-sect {
   	padding: 55px 0;
 	background-color: #f2efee;
-	
+	position: relative;
 }  
 
 .pr-header {
 	margin-bottom: 55px;
+	margin-top: 86px;
 }
 
 .pr-title {
@@ -783,6 +844,10 @@ a.pr-info {
     -webkit-transition: all .3s;
 }
 
+.socials-dfr a:first-child {
+	padding-left: 10px;
+}
+
 /* Section Footer */
 .main-footer {
   background-color: rgba(96, 89, 90, 0.85);
@@ -790,11 +855,11 @@ a.pr-info {
 .copy-wrap {
 	padding: 10px 0;
 }
-.copy-wrap p {
+.copy-name {
 	text-align: center;
     /* padding: 12px 0; */
-    color: #a2b8bf;
-    font-size: 14px;
+    color: #e2e4e4;
+    font-size: 13px;
     letter-spacing: 2px;
     margin: 0;
     margin-top: 12px;
@@ -808,6 +873,35 @@ a.pr-info {
     /* padding-top: 5px; */
 }
 
+.copy-wrap img:hover {
+	transform: scale(1.3);
+}
+
+.footer-menu {
+	
+	text-align: center;
+	padding-left: 18px;
+	margin-bottom: 0;
+}
+
+.footer-menu li {
+	display: inline;
+	list-style: none;
+}
+
+.footer-menu li a {
+   color: #a2b8bf;
+    font-size: 17px;
+    /* padding: 0; */
+    letter-spacing: 1.5px;
+    margin: 0 32px;
+    text-decoration: underline;
+}
+
+.footer-menu li a:hover {
+	color: #e2e4e4;
+	text-decoration: none;
+}
 
 
 

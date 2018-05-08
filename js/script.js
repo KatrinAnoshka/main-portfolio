@@ -72,6 +72,28 @@ $(document).ready(function() {
     return false;
   });
 
+
+  // Стрелка вниз с Хэдера
+  $(".arrow-bottom").click(function() {
+    $("html, body").animate({ scrollTop: $("#st-container").height()+70 }, "slow");
+    return false;
+  });
+
+  /************** Аякс отправка форм **************/
+
+  $("form").submit(function(e) {
+    var ths = $(this);
+    e.preventDefault;
+    $.ajax({
+      type: "POST",
+      url: "mail.php",
+      data: $(this).serialize()
+    }).done(function() {
+      alert("Thank You!");
+    });
+    return false;
+  });
+
 });  
 
 
