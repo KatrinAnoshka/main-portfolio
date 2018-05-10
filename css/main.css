@@ -26,17 +26,21 @@ body,
 	height: 100vh;
 }
 
+
 .st-container {
 	/*position: absolute;*/
 	overflow: hidden;
+
 }
 
 .st-pusher {
-	position: relative;
+	/*position: relative;*/
 	left: 0;
-	z-index: 99;
+	/*z-index: 99;*/
 	-webkit-transition: -webkit-transform 0.5s;
 	transition: transform 0.5s;
+	position: fixed;
+z-index: 1;
 }
 
 .st-pusher::after {
@@ -420,7 +424,8 @@ body,
 .tools-sect {
   	padding: 55px 0 12px;
 	background-color: #e4d8d7;
-	
+	z-index: 255;
+	position: relative;
 }  
 
 .tls-title {
@@ -481,6 +486,7 @@ body,
   	padding: 55px 0;
 	background-color: #f2efee;
 	position: relative;
+	z-index: 255;
 }  
 
 .pr-header {
@@ -685,6 +691,7 @@ a.pr-info {
   	padding: 75px 0;
 	background-color: #a2b8bf;
 	position: relative;
+	z-index: 255;
 }
 .top-triangle {
   	height: 90px;
@@ -850,7 +857,9 @@ a.pr-info {
 
 /* Section Footer */
 .main-footer {
-  background-color: rgba(96, 89, 90, 0.85);
+  background-color: rgba(96, 89, 90, 1);
+  z-index: 255;
+  position: relative;
 }
 .copy-wrap {
 	padding: 10px 0;
