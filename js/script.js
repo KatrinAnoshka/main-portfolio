@@ -97,6 +97,33 @@ $(document).ready(function() {
   // Плавный скроллинг
   jQuery.scrollSpeed(100, 800);
 
+  // Tools animation
+  $(".tools-sect").waypoint(function() {
+    $(".tls-item").each(function(index) {
+      var ths = $(this);
+      setInterval(function() {
+        ths.addClass("on");
+      }, 200*index);
+    });
+  }, {
+    offset : "30%"
+  });
+
+  // Projects animation in loading
+  $(".projects-sect").waypoint(function() {
+
+    $(".pr-content .info-item").each(function(index) {
+      var ths = $(this);
+      setInterval(function() {
+        ths.removeClass("pr-off").addClass("pr-on");
+      }, 400*index);
+    });
+
+  }, {
+    offset : "20%"
+  });
+
+  
 });
 
 

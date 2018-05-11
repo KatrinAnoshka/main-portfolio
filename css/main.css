@@ -9,7 +9,7 @@ body {
 	background: #a2b8bf;
 	font-weight: 400;
 	font-family: "Open Sans", sans-serif;
-	
+
 }
 
 a, a:hover, a:focus {
@@ -463,7 +463,22 @@ z-index: 1;
 }  
 .tls-item {
 	padding: 38px 22px;
+	vertical-align: top;
+    opacity: 0;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+    -webkit-transform: translateY(-25px);
+    -ms-transform: translateY(-25px);
+    transform: translateY(-25px)
 }
+
+.tls-item.on {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0)
+}
+
 .tls-item img {
 	width: auto;
     height: 150px;
@@ -526,6 +541,8 @@ z-index: 1;
     margin-top: 28px;
     width: 100%;
     flex-wrap: wrap;
+    -webkit-perspective: 1500px;
+    perspective: 1500px
 }
 
 .pr-filter {
@@ -597,6 +614,20 @@ z-index: 1;
 .info-item-wrap {
 	border: 10px solid #f1eeed;
 }
+.info-item {
+	-webkit-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+.info-item.pr-on {
+    opacity: 1
+}
+
+.info-item.pr-off {
+    -webkit-transform: rotateY(100deg);
+    transform: rotateY(100deg);
+    opacity: 0
+}
 
 .view {
   width: 380px;
@@ -633,24 +664,24 @@ z-index: 1;
     font-size: 19px;
     padding: 10px;
     background: rgba(171, 90, 53, .8);
-    margin: 60px 0;
+    /*margin: 60px 0;*/
     transform: translateY(-100px);
     opacity: 0;
 }
 
-/*.pr-descr {
+.pr-descr {
   font-family: "Open Sans", sans-serif;
 	font-size: 17px;
 	font-weight: 700;
 	line-height: 35px;
 	position: relative;
 	color: #341918;
-	padding: 30px 5px 30px 5px;
+	padding: 20px 5px;
 	text-align: center;
 	transform: translateY(100px);
 	opacity: 0;
 	transition: all 0.2s linear;
-}*/
+}
 
 a.pr-info {
   font-size: 20px;
@@ -676,11 +707,13 @@ a.pr-info {
   opacity: .9;
 }
 
-.view:hover .pr-name,a.pr-info{
+.view:hover .pr-name, .pr-descr, a.pr-info{
   opacity: 1;
   transform: translateY(0px);
 }
-
+.view:hover .pr-descr {
+  transition-delay: 0.1s;
+}
 .view:hover a.pr-info {
   transition-delay: 0.2s;
 }
@@ -737,12 +770,12 @@ a.pr-info {
 	display: flex;
     flex-direction: row;
     justify-content: space-around;
-   margin-top: 50px;
+   margin-top: 31px;
     
 }
 .forms label {
   margin-top: 22px;
-  margin-bottom: 20px;
+  margin-bottom: 32px;
   display: block; 
 }
 
@@ -854,6 +887,9 @@ a.pr-info {
 
 .socials-dfr a:first-child {
 	padding-left: 10px;
+}
+.cnt-right .btn-arrow {
+box-shadow: inset #a2b8bf 0 -1px 1px, inset 0 1px 1px #a2b8bf, #a2b8bf 0 0 0 1px, #000 0 10px 15px -10px;
 }
 
 /* Section Footer */
