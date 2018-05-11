@@ -94,10 +94,15 @@ $(document).ready(function() {
     return false;
   });
 
+  // Плавный скроллинг
+  jQuery.scrollSpeed(100, 800);
 
-  
-});  
+});
 
+
+
+            
+      
 
 
 
