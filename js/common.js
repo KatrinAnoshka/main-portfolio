@@ -41,7 +41,6 @@ function closeMenu(el) {
 }
 
 
-
 $(document).ready(function() {
 
   /************* Button menu *************/
@@ -50,7 +49,7 @@ $(document).ready(function() {
     $('.toggle_but').toggleClass('tog_mnu');
   });
 
-  /******** mixItUp - Projects animation ********/
+  /******** MixItUp - Projects animation ********/
 
   $(function(){ 
     $(".projects-sect").mixItUp({
@@ -66,20 +65,22 @@ $(document).ready(function() {
     });
   });
 
-  // Стрелка наверх
+  /************ Top arraw ************/
+
   $(".top").click(function() {
     $("html, body").animate({ scrollTop: 0 }, "slow");
     return false;
   });
 
 
-  // Стрелка вниз с Хэдера
+  /********* Bottom arraw *********/
+
   $(".arrow-bottom").click(function() {
     $("html, body").animate({ scrollTop: $("#st-container").height()+70 }, "slow");
     return false;
   });
 
-  /************** Аякс отправка форм **************/
+  /************** Sending the form **************/
 
   $("form").submit(function(e) {
     var ths = $(this);
@@ -94,10 +95,12 @@ $(document).ready(function() {
     return false;
   });
 
-  // Плавный скроллинг
+  /************ Smooth scrolling ************/
+
   jQuery.scrollSpeed(100, 800);
 
-  // Tools animation
+  /************* Tools animation in loading *************/
+
   $(".tools-sect").waypoint(function() {
     $(".tls-item").each(function(index) {
       var ths = $(this);
@@ -109,7 +112,8 @@ $(document).ready(function() {
     offset : "30%"
   });
 
-  // Projects animation in loading
+  /********* Projects animation in loading *********/
+
   $(".projects-sect").waypoint(function() {
 
     $(".pr-content .info-item").each(function(index) {
@@ -124,7 +128,7 @@ $(document).ready(function() {
   });
 
   
-});
+});//<--/(document).ready -->
 
 
 
