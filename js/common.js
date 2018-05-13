@@ -91,6 +91,9 @@ $(document).ready(function() {
       data: $(this).serialize()
     }).done(function() {
       alert("Thank You!");
+      setTimeout(function() {
+        $("form").trigger("reset");
+      }, 1000);
     });
     return false;
   });
