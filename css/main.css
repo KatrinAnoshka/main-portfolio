@@ -1016,6 +1016,10 @@ a.pr-info {
 	        box-shadow: inset #a2b8bf 0 -1px 1px, inset 0 1px 1px #a2b8bf, #a2b8bf 0 0 0 1px, #000 0 10px 15px -10px;
 }
 
+.cnt-right .btn-arrow:hover {
+	color: #fff;
+}
+
 /*********** Section Footer ***********/
 
 .main-footer {
