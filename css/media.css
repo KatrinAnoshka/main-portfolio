@@ -75,6 +75,10 @@
 
 @media only screen and (max-width : 480px) {
 
+	.main .content {
+		padding-left: 20px;
+	}
+	
 	.filter {
 		font-size: 17px;
 		padding: 0 10px;
@@ -118,10 +122,6 @@
 }	
 
 @media only screen and (max-width : 400px) {
-
-	.main .content {
-		padding-left: 20px;
-	}
 
 	.main-title {
 		font-size: 1.8em; 
