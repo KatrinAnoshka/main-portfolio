@@ -1,51 +1,16 @@
-/******** Menu efffect ********/
-
-    /* 
-    Inspired from: https://tympanus.net/codrops/2013/08/28/transitions-for-off-canvas-navigations/
-
-    there are still some quirks for animation 3, 6, 7, 8 & 14 
-    as they do not animate back gracefully  
-    (those are the navs in the div with class st-pusher)
-    */
-
-var click = document.querySelectorAll('.toggle_but');
-var menu = document.querySelector('#st-container');
-var pusher = document.querySelector('.st-pusher');
-// to store the corresponding effect
-var effect;
-
-// adding a click event to all the buttons
-for (var i = 0; i < click.length; i++) {
-  click[i].addEventListener('click', addClass)
-}
-
-pusher.addEventListener('click', closeMenu);
-
-function addClass(e) {
-  // to get the correct effect
-  effect = e.target.getAttribute('data-effect');
-  // adding the effects
-  menu.classList.toggle(effect);
-  menu.classList.toggle('st-menu-open');
-  
-  // console.log(e.target.getAttribute('data-effect'));
-}
-
-function closeMenu(el) {
-  // if the click target has this class then we close the menu by removing all the classes
-  if (el.target.classList.contains('st-pusher')) {
-    menu.classList.toggle(effect);
-    menu.classList.toggle('st-menu-open');
-    // console.log(el.target);
-  } 
-}
-
-
 $(document).ready(function() {
 
   /************* Button menu *************/
 
   $('.toggle_but').on('click', function(){
+    $('.toggle_but').toggleClass('tog_mnu');
+    $('.st-container').toggleClass('st-menu-open');    
+    $('.st-container').toggleClass('st-effect');    
+  });
+
+  $('.st-menu a').on('click', function(){
+    $('.st-container').removeClass('st-menu-open');    
+    $('.st-container').removeClass('st-effect');  
     $('.toggle_but').toggleClass('tog_mnu');
   });
 
@@ -72,7 +37,6 @@ $(document).ready(function() {
     return false;
   });
 
-
   /********* Bottom arraw *********/
 
   $(".arrow-bottom").click(function() {
@@ -98,6 +62,16 @@ $(document).ready(function() {
     return false;
   });
 
+ /************* Menu links *************/
+  $(function() {
+    $('a[href^="#"]').click(function () { 
+        elementClick = $(this).attr("href");
+        destination = $(elementClick).offset().top;
+        $('body').animate( { scrollTop: destination }, 1100 );
+        $('html').animate( { scrollTop: destination }, 1100 );
+        return false;
+    });
+  });
   /************ Smooth scrolling ************/
 
   jQuery.scrollSpeed(100, 800);
