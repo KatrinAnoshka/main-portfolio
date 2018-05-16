@@ -72,6 +72,10 @@ $(document).ready(function() {
         return false;
     });
   });
+  $(".home-link").click(function() {
+    $("html, body").animate({ scrollTop: 0 }, "slow");
+    return false;
+  });
   /************ Smooth scrolling ************/
 
   jQuery.scrollSpeed(100, 800);
