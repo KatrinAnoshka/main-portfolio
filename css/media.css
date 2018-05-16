@@ -83,6 +83,18 @@
 	.header-text {
 		font-size: 18px;
 	}
+	
+	.tls-item {
+		padding: 28px 22px;
+	}
+
+	.tls-item img {
+		height: 100px;
+	}
+
+	.tls-content {
+		margin-top: 70px;	
+	}
 
 	.view, .mask, .img-sites {
 		width: 300px;
@@ -90,7 +102,12 @@
 	}
 
 	.pr-name {
-		margin: 45px 0;
+		margin: 19px 0;
+	}
+	
+	.pr-descr {
+		padding: 0 5px;
+		line-height: 26px;
 	}
 
 	.cnt-descr {
@@ -101,6 +118,18 @@
 }	
 
 @media only screen and (max-width : 400px) {
+
+	.main .content {
+		padding-left: 20px;
+	}
+
+	.main-title {
+		font-size: 1.8em; 
+	}
+
+	.header-text {
+		font-size: 15px;
+	}
 
 	.footer-menu li a {	   
 		font-size: 14px;  
