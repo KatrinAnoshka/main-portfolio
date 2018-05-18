@@ -63,15 +63,22 @@ $(document).ready(function() {
   });
 
  /************* Menu links *************/
-  $(function() {
-    $('a[href^="#"]').click(function () { 
-        elementClick = $(this).attr("href");
-        destination = $(elementClick).offset().top;
-        $('body').animate( { scrollTop: destination }, 1100 );
-        $('html').animate( { scrollTop: destination }, 1100 );
-        return false;
-    });
+  $('a[href*=#]:not([href=#])').click(function() {
+      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        headerHeight = $('.header').height();  
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top - headerHeight
+        }, 800, function() {
+        target.focus();
+      });
+      return false;
+      }
+    }
   });
+
   $(".home-link").click(function() {
     $("html, body").animate({ scrollTop: 0 }, "slow");
     return false;
